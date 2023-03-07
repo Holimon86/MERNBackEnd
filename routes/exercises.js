@@ -43,7 +43,7 @@ router.route('/add').post((req, res)   => {
             exercise.username = req.body.username;  
             exercise.description = req.body.description;  
             exercise.duration = Number(req.body.duration);  
-            exercise.date = _Date_.parse(req.body.date);
+            exercise.date = Date.parse(req.body.date);
             
             exercise.save()  
               .then(() => res.json('Exercise updated!'))  
